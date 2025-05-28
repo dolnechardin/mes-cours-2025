@@ -1,0 +1,2 @@
+Pour le cours du 27 Mai, Le professeur a continue avec le travail sur la gestion des incidents
+Il a continue avec le cours precedent utilisant RStudio.
