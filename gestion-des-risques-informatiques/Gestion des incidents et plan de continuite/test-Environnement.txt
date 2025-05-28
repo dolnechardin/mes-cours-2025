@@ -1,0 +1,17 @@
+import requests
+# URL de l'API Ollama locale
+OLLAMA_API_URL = "http://localhost:11434/api/generate"
+# Corps de la requête
+data = {
+    "model": "mistral",
+    "prompt": "Plan de reprise de continuité d'activité",
+    "stream": False  # Mettre à True pour recevoir une réponse en streaming
+}
+# Requête POST vers l'API
+response = requests.post(OLLAMA_API_URL, json=data)
+# Vérification et affichage
+if response.status_code == 200:
+    result = response.json()
+    print("Réponse du modèle :", result["response"])
+else:
+    print("Erreur :", response.status_code, response.text)
